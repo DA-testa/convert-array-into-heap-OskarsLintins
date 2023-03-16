@@ -32,7 +32,7 @@ def main():
     elif 'F' in word:
         filename = input().strip()
         ##filepath = os.path.join(os.getcwd(),'test/' + filename)
-        with open('/workspaces/convert-array-into-heap-OskarsLintins/tests/' + filename, 'r') as fn:
+        with open(filepath, 'r') as fn:
             n = int(fn.readline())
             data = list(map(int, fn.readline().split()))
 

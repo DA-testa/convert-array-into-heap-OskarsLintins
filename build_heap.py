@@ -29,10 +29,10 @@ def main():
         n = int(input())
         data = list(map(int, input().split()))
 
-    elif 'F' in word:
+    if word[0] == "F":
         filename = input().strip()
-        filepath = os.path.join(os.getcwd(),'test/' + filename)
-        with open(filepath, 'r') as fn:
+        #filepath = os.path.join(os.getcwd(),'test/' + filename)
+        with open('tests/' + filename, 'r') as fn:
             n = int(fn.readline())
             data = list(map(int, fn.readline().split()))
 

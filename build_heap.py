@@ -1,11 +1,11 @@
 # python3
-
+import os;
 
 def build_heap(data):
     swaps = []
     length = len(data)
-    j = i
-    for i in range(n//2-1,-1,1):
+    for i in range(length//2-1,-1,1):
+        j = i
         while True:
             leftChild = 2*i + 1
             rightChild = 2*i + 2
@@ -14,7 +14,7 @@ def build_heap(data):
             elif leftChild <= n-1:
                 j = leftChild
             if i != j:
-                data[i,j] = data [j,i]
+                data[i], data[j] = data[j], data[i]
                 swaps.append(i,j)
                 i = j
             else:
@@ -41,7 +41,7 @@ def main():
             with open(filepath, 'r') as fn:
                 n = int(fn.readline())
                 data = list(map(int, fn.readline().split()))
-                
+
     assert len(data) == n
     swaps = build_heap(data)
 
